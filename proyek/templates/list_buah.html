@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Buah</title>
+</head>
+<body>
+    <div class="main">
+        <a href="{% url 'buah:tambah_buah' %}">Tambah Buah</a> <br>
+        {% for data in buah %}
+        <a href="{% url 'buah:detail_buah' data.id %}">{{ data.nama }}</a> <br>
+        {% endfor %}
+    </div>
+</body>
+</html>
